@@ -1,8 +1,27 @@
 boolean isClicked = false;
+<<<<<<< HEAD
+=======
+int startX = 0;
+int startY = 0;
+int endX = 0;
+int endY = 700;
+
+int spacing = 10;
+
+int numberDrawn = 0;
+int totalLines = 300;
+>>>>>>> 3d099f8db83dfc10987dd954bdb77f7276686b22
 
 void setup() {
   size(1200, 700); 
   background(48, 21, 58);
+<<<<<<< HEAD
+=======
+  stroke(255);
+  strokeWeight(3);
+  line(startX, startY + spacing, endX, endY);
+  spacing += 10;
+>>>>>>> 3d099f8db83dfc10987dd954bdb77f7276686b22
 }
 
 void draw () {
@@ -51,8 +70,13 @@ void draw () {
   //Left Eye
   fill(255);
   noStroke();
+<<<<<<< HEAD
   ellipse(height/4 + 360, width/4 +10 , 80, 70);
   
+=======
+  ellipse(height/4 + 360, width/4 +10, 80, 70);
+
+>>>>>>> 3d099f8db83dfc10987dd954bdb77f7276686b22
   //Right Eye
   fill(255);
   noStroke();
@@ -62,12 +86,39 @@ void draw () {
   fill(0);
   noStroke();
   ellipse(height/4 + 360, width/4 + 10, 20, 20);
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 3d099f8db83dfc10987dd954bdb77f7276686b22
   //Right Pupil
   fill(0);
   noStroke();
   ellipse(height/4 + 480, width/4 + 10, 20, 20);
 
+<<<<<<< HEAD
+=======
+  //Mouth
+  stroke(0);
+  line(550, 390, 650, 390);
+
+  if (numberDrawn < totalLines) {
+    line(
+      startX + spacing, 
+      startY, 
+      endX + spacing, 
+      endY
+      );
+    spacing += random(1, 10);
+    println("spacing: " + spacing);
+
+    numberDrawn += 1;
+    //numberDrawn = numberDrawn + 1;
+  } else {
+    spacing = 0;
+    numberDrawn = 0;
+  }
+>>>>>>> 3d099f8db83dfc10987dd954bdb77f7276686b22
 }
 
 void mousePressed() {
