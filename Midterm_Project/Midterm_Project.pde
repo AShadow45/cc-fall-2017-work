@@ -1,4 +1,5 @@
 boolean isClicked = false;
+
 int startX = 0;
 int startY = 0;
 int endX = 0;
@@ -7,13 +8,13 @@ int endY = 700;
 int spacing = 10;
 
 int numberDrawn = 0;
-int totalLines = 300;
+int totalLines = 150;
 
 void setup() {
   size(1200, 700); 
   background(48, 21, 58);
   stroke(255);
-  strokeWeight(3);
+  strokeWeight(5);
   line(startX, startY + spacing, endX, endY);
   spacing += 10;
 }
@@ -92,7 +93,7 @@ void draw () {
       endX + spacing, 
       endY
       );
-    spacing += random(1, 10);
+    spacing += 10;
     println("spacing: " + spacing);
 
     numberDrawn += 1;
